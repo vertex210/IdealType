@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* init */
+html { width:100%; height:100%; text-rendering:optimizeLegibility !important; -webkit-font-smoothing:antialiased !important; }
+
+body { position:relative; height:100%;overflow: scroll; margin:0 auto !important; text-shadow:1px 1px 1px rgba(0,0,0,0.004); text-rendering:optimizeLegibility !important; -webkit-font-smoothing:antialiased !important; color:white; font-family:Arial,'Roboto','Noto Sans KR',"Helvetica Neue",Helvetica,sans-serif; font-size:12px; background-color:#fff; z-index:1; text-align:center;}
+
+body,header,h1,p,ul,button { margin:0; padding:0; }
+
+h1,h2,h3,h4,h5,h6 { display:inline-block; margin:0; padding:0; }
+
+h1 { font-size:18px; }
+
+a { color:inherit; font-style:normal; text-decoration:none; }
+
+a:after, a:before { transition:0.3s all; -webkit-transition:0.3s all; -moz-transition:0.3s all; }
+
+img { vertical-align:top }
+
+i { font-style:normal }
+
+button { cursor:pointer; border:none; background:none; outline:none }
+
+a { text-decoration:none; cursor: pointer; }
+
+ol { list-style:none }
+ul { height:100%; display:inline-block; width:100% }
+ul li { height:100%; list-style:none; display:inline-block; vertical-align:middle }
+ul li>* { display:inline-block; vertical-align:middle }
+
+button,select,input { outline:none; }
+
+input:-webkit-autofill,  input:-webkit-autofill:hover,  input:-webkit-autofill:focus,  input:-webkit-autofill:active { -webkit-animation-fill-mode: both; }
+input[type="search"] { -webkit-appearance: none; }
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+input[type="search"]::-ms-clear { display:none; }
+
+
+/* init end*/
+
+/* common */
+section { display:inline-block; min-width : 200px; padding: 10px; text-align:center;background-color:#4b4b4b; }
+section h2 { padding : 5px 10px;}
+.hide { display:none; }
+/* common end */
+
+/* button */
+.btn01 { padding:5px 10px; background-color:lightslategray; border-radius : 10px; color:white; }
+/* form end */
+
+
+/* tournament */
+.tournament .actionBar { text-align:left; padding: 5px; margin-bottom:5px; }
+.tournament .fightArea div { float:left; }
+.tournament .fightArea .vs { display:block; line-height:500px; padding: 0 10px; font-size:18px; }
+.tournament .fighter .fighterImg { height : 500px; }
+.tournament .fighter .fighterName {  color:white; }
+/* tournament end */
+/* finalResult */
+.finalResult .matchBoard { }
+.finalResult .roundMatches { display:flex; justify-content: space-around; flex-direction:column; position:relative; float:left; width:133px; height: 100%; background-color: #4b4b4b; }
+.finalResult .roundMatches .match { display: flex; flex-direction: column;  justify-content: center; position:relative; flex:1;}
+.finalResult .roundMatches .match .fighter{ position: relative; width:100px; height: 26px; line-height:25px; background-color:lightslategray; border:1px solid cadetblue; color:white; font-weight: bold; text-indent:5px; }
+
+.finalResult .roundMatches .match:before,
+.finalResult .roundMatches .match:after { content:""; position:absolute; }
+.finalResult .roundMatches .match .fighter:before,
+.finalResult .roundMatches .match .fighter:after { content:""; position:absolute; background-color:white; }
+
+.finalResult .roundMatches:not(:last-child) .match:nth-child(odd):before { top:50%; left:113px; bottom:0; margin-top:2px; width:8px; border-top:2px solid white; border-right:2px solid white; }
+.finalResult .roundMatches:not(:last-child) .match:nth-child(odd):after { left:123px; bottom:-1px; width:10px; background-color:white; height:2px;  }
+.finalResult .roundMatches:not(:last-child) .match:nth-child(even):before { bottom:50%; left:113px; top:0; margin-bottom:2px; width:8px; border-bottom:2px solid white; border-right:2px solid white; }
+.finalResult .roundMatches:not(:last-child) .match:nth-child(even):after { left:123px; top:0; width:10px; background-color:white; height:2px;  }
+
+.finalResult .roundMatches:not(:last-child) .match .fighter:nth-child(odd):before{ top:13px; left:101px; width:10px; height:2px; }
+.finalResult .roundMatches:not(:last-child) .match .fighter:nth-child(odd):after{ top:13px; left:111px; width:2px; height:15px; }
+.finalResult .roundMatches:not(:last-child) .match .fighter:nth-child(even):before{ top:13px; left:101px; width:10px; height:2px; }
+.finalResult .roundMatches:not(:last-child) .match .fighter:nth-child(even):after{ top:0; left:111px; width:2px; height:15px; }
+
+.finalResult .roundMatches .match .fighter.winner { background-color : orange; }
+/* finalResult end*/

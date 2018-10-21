@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Ideal Type</title>
+</head>
+<body>
+
+<script type="text/template" id="selectMemberCount">
+  <section>
+    <H2>인원수를 선택하세요.</H2>
+    <div class="buttonsArea">
+      <Button class="btn01" value="16">16강</Button>
+      <Button class="btn01" value="32">32강</Button>
+    </div>
+  </section>
+</script>
+
+<script type="text/template" id="tournament">
+  <section class="tournament">
+    <H2>이상형 월드컵 <span class="round"></span>강</H2>
+    <div class="actionBar"><button class="btn01 btnBack">이전으로</button></div>
+    <div class="fightArea">
+      <div><button class="fighter" value="0"><Img class="fighterImg" src=""/><p><span class="fighterName"></span></p></button></div>
+      <div><span class="vs">VS</span></div>
+      <div><button class="fighter" value="1"><Img class="fighterImg" src=""/><p><span  class="fighterName"></span></p></button></div>
+    </div>
+  </section>
+</script>
+
+<script type="text/template" id="finalResult">
+  <section class="finalResult">
+    <H2>최종 결과</H2>
+    <ul class="matchBoard"></ul>
+  </section>
+</script>
+
+<script type="text/template" id="finalResultRoundMatches">
+  <li class="roundMatches"></li>
+</script>
+<script type="text/template" id="finalResultMatch">
+  <div class="match">
+    <p class="fighter"></p>
+    <p class="fighter"></p>
+  </div>
+</script>
+
+<script src="bundle.js"></script>
+
+</body>
+</html>
