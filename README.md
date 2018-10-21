@@ -5,4 +5,5 @@
 2. cd IdealType
 3. npm install
 4. npm run build
-5. dist/index.html 실행
+5. cd dist
+6. index.html
